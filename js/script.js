@@ -39,30 +39,6 @@ tabsBtn.forEach(function(element){
   })
 })
 
-//swiper
-
-const swiper = new Swiper('.swiper', {
-  loop: true,
-	pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-		clickable: true
-  },
-  mousewheel: {
-    invert: true,
-    eventsTarget: '.swiper-pagination',
-  },
-});
-
-// accordion
-
-new Accordion('.accordion-list', {
-  elementClass: 'accordion',
-  triggerClass: 'accordion__control',
-  panelClass: 'accordion__content',
-  activeClass: 'accordion--active'
-});
-
 // search
 
 let search = document.querySelector('.search');
@@ -91,3 +67,31 @@ searchContainerbtn.addEventListener('click', function () {
   searchContainer.querySelector('.serach-container__input').value = '';
   alert("Поиск временно не доступен.");
 })
+
+//swiper
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+	pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+		clickable: true
+  },
+  autoplay: {
+    delay: 3500,
+  },
+  mousewheel: {
+    invert: true,
+    eventsTarget: '.swiper-pagination',
+  },
+});
+
+// accordion
+
+new Accordion('.accordion-list', {
+  elementClass: 'accordion',
+  triggerClass: 'accordion__control',
+  panelClass: 'accordion__content',
+  activeClass: 'accordion--active'
+});
+
