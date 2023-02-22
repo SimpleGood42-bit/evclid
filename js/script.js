@@ -48,16 +48,15 @@ let searchContainerbtn = document.querySelector('.serach-container__search');
 
 search.addEventListener('click', function () {
 
-    searchContainer.classList.add('search-container--active');
-    search.classList.add('search--disable');
-
+  searchContainer.classList.add('search-container--active');
+  search.classList.add('search--disable');
 })
 
 searchClose.addEventListener('click', function () {
 
-    searchContainer.classList.remove('search-container--active');
-    search.classList.remove('search--disable');
-    searchContainer.querySelector('.serach-container__input').value = '';
+  searchContainer.classList.remove('search-container--active');
+  search.classList.remove('search--disable');
+  searchContainer.querySelector('.serach-container__input').value = '';
 })
 
 searchContainerbtn.addEventListener('click', function () {
@@ -83,6 +82,9 @@ const swiper = new Swiper('.swiper', {
   mousewheel: {
     invert: true,
     eventsTarget: '.swiper-pagination',
+  },
+  a11y: {
+    paginationBulletMessage: 'Переход к слайду {{index}}',
   },
 });
 
